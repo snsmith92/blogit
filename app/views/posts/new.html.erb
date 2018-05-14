@@ -1,0 +1,9 @@
+<div class = 'col-md-8 offset-2'>
+  <h1 class = "text-center">New Blog Post</h1>
+  <%= simple_form_for @post, url: posts_path do |f| %>
+    <%= f.input :title %>    
+    <%= f.input :content %>      
+    <%= f.input :tag_ids, as: :select, collection: Tag.order(:name), label_method: :name, input_html: {multiple: true} %>
+    <%= f.submit "Next", class: 'btn btn-lg btn-primary float-right' %> 
+  <% end %>
+</div>

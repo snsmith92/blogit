@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actioncable (5.0.7)
       actionpack (= 5.0.7)
@@ -39,7 +40,12 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    autoprefixer-rails (8.2.0)
+      execjs
     bindex (0.5.0)
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     builder (3.2.3)
     byebug (10.0.2)
     coffee-rails (4.2.2)
@@ -82,6 +88,7 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pg (1.0.0)
+    popper_js (1.11.1)
     puma (3.11.4)
     rack (2.0.5)
     rack-test (0.6.3)
@@ -98,6 +105,8 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.0.7)
       sprockets-rails (>= 2.0.0)
+    rails-assets-chosen (1.8.3)
+    rails-assets-tether (1.4.3)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -124,6 +133,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    simple_form (4.0.0)
+      actionpack (> 4)
+      activemodel (> 4)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -159,15 +171,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap (= 4.0.0.alpha6)
   byebug
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
   pg (>= 0.18, < 2.0)
+  popper_js (~> 1.11.1)
   puma (~> 3.0)
   rails (~> 5.0.7)
+  rails-assets-chosen!
+  rails-assets-tether (>= 1.3.3)!
   sass-rails (~> 5.0)
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

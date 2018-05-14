@@ -85,5 +85,5 @@ test:
 production:
   <<: *default
   database: blogit_production
-  username: blogit
-  password: <%= ENV['BLOGIT_DATABASE_PASSWORD'] %>
+  # username: blogit
+  # password: <%= ENV['BLOGIT_DATABASE_PASSWORD'] %>

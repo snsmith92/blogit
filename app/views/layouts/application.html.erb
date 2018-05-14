@@ -9,6 +9,34 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand">Blogit</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <%= link_to 'View Blog Posts', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Add A Blog Post', new_post_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'View Tutorial', new_post_path, class: 'btn btn-primary' %>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
+
+<script>
+  $(document).on('ready page:load', function () {
+    $('#post_tag_ids').chosen({
+      allow_single_deselect: true,
+      width: '100%'
+    })
+  });
+</script>
